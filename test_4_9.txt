@@ -1,0 +1,88 @@
+#include<stdio.h>
+int main()
+{
+	int a, b, t;
+	int* pa = &a, * pb = &b, * pt;
+	int** ppa = &pa, ** ppb = &pb, ** ppt;
+	a = 10, b = 20;
+	printf("%d %d %d %d %d %d\n", a, b, *pa, *pb, **ppa, **ppb);
+	ppt = ppb; ppb = ppa; ppa = ppt;
+	printf("%d %d %d %d %d %d\n", a, b, *pa, *pb, **ppa, **ppb);
+	pt = pb; pb = pa; pa = pt;
+	printf("%d %d %d %d %d %d\n", a, b, *pa, *pb, **ppa, **ppb);
+	t = a; b = a; a = t;
+	printf("%d %d %d %d %d %d\n", a, b, *pa, *pb, **ppa, **ppb);
+	return 0;
+}
+
+
+//struct S
+//{
+//	char name[20];
+//	int age;
+//};
+//void print(struct S* tmp)
+//{
+//	printf("%s\n", (*tmp).name);
+//	printf("%s\n", tmp->name);
+//	printf("%d\n", (*tmp).age);
+//	printf("%d\n", tmp->age);
+//}
+//int main()//结构体传参
+//{
+//	struct S s = { "里昂",35 };
+//	print(&s);
+//	return 0;
+//}
+
+
+//struct S
+//{
+//	char name[20];
+//	int age;
+//	char sex[5];
+//};
+//struct T
+//{
+//	char ch[20];
+//	int a;
+//	char* p;
+//	struct S s;
+//};
+//int main()//结构体嵌套
+//{
+//	char arr[] = "Hello World!";
+//	struct T t = { "Hello",10,arr,{"阿财",18,"男"} };
+//	printf("%s\n", t.ch);
+//	printf("%d\n", t.a);
+//	printf("%s\n", t.p);
+//	printf("%s\n", t.s.name);
+//	printf("%d\n", t.s.age);
+//	printf("%s\n", t.s.sex);
+//	return 0;
+//}
+
+
+//struct Stu
+//{
+//	char name[5];
+//	int age;
+//	char sex[3];
+//	char tele[20];
+//};
+//typedef struct Std
+//{
+//	char name[20];
+//	int age;
+//	char sex[5];
+//}Std;
+//int  main()
+//{
+//	struct Stu s={"张三",20,"男","13966052160"};
+//	Std s1 = { "李四",25,"男" };
+//	printf("%s\n", s.name);
+//	printf("%d\n", s.age);
+//	printf("%s\n", s.sex);
+//	printf("%s\n", s.tele);
+//	return 0;
+//}
