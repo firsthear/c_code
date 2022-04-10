@@ -1,0 +1,65 @@
+#include<stdio.h>
+int main()
+{
+	char a = -128;
+	printf("%u\n", a);
+	return 0;
+}
+
+
+
+//int main()
+//{
+//	char a = -1;
+//	signed char b = -1;
+//	unsigned char c = -1;
+//	printf("a=%d,b=%d,c=%d\n", a, b, c);
+//	return 0;
+//}
+
+
+//#include<math.h>
+//#define M 1000
+//int main()
+//{
+//	int i, k = 0;
+//	printf("请输入一个小于M的整数i:");
+//	scanf("%d", &i);
+//	if (M < i)
+//		printf("输入的数据不符合要求，请输入一个小于M的整数:");
+//	else
+//	k = (int)sqrt(i);
+//	printf("%d\n", k);
+//	return 0;
+//}
+
+
+//int main()//选择法求10个数的最小值
+//{
+//	int a[6] = { 0 };
+//	int i = 0, min = 0, tmp = 0, j = 0;
+//	printf("输入初始数字:");
+//	for (i = 1; i <= 5; i++)
+//	{
+//		scanf("%d", &a[i]);
+//	}
+//	for (i = 1; i <= 5; i++)
+//	{
+//		min = i;
+//		for (j = i + 1; j <= 5 ; j++)
+//		{
+//			if (a[min] > a[j])
+//			{
+//				min = j;
+//				tmp = a[i];
+//				a[i] = a[min];
+//				a[min] = tmp;
+//			}
+//		}
+//	}
+//	for (i = 1; i <= 5; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	return 0;
+//}
