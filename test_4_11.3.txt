@@ -1,0 +1,70 @@
+#include<stdio.h>
+int main()
+{
+	char arr1[] = "abcdef";//分别存放在不同的位置
+	char arr2[] = "abcdef";
+	const char* p1 = "abcdef";//常量字符串,指向同一位置
+	const char* p2 = "abcdef";
+	if (arr1 == arr2)
+	{
+		printf("hehe\n");
+	}
+	else
+	{
+		printf("haha\n");
+	}
+	if (p1 == p2)
+	{
+		printf("hello\n");
+	}
+	else
+	{
+		printf("hello world\n");
+	}
+	return 0;
+}
+
+
+
+//int main()
+//{
+//	const char* p = "abcd";//常量字符串，值不可改变
+//	printf("%s\n", p);
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	char arr[] = "abcdef";
+//	char* pc = arr;
+//	printf("%s\n", arr);
+//	printf("%s\n", pc);
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	char ch = 'w';
+//	char* pc = &ch;
+//	*pc = 'a';
+//	printf("%c\n", *pc);
+//	printf("%c\n", ch);
+//	return 0;
+//}
+
+
+//void test(int arr[])
+//{
+//	int sz =sizeof(arr) / sizeof(arr[0]);
+//	printf("%d\n", sz);//64位平台的值为2,32为平台的值为1
+//}
+//int main()
+//{
+//	int arr[] = { 0 };
+//	test(arr);
+//	return 0;
+//}
